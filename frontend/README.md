@@ -1,15 +1,4 @@
-# geniushire.ai (temp name)
-
-steps to run:
-
-1. create .env.local file in root directory, put in:
-   
-        OPENAI_API_KEY=YOUR_KEY <- replace with your key
-2. in the root directory run: npm run dev
-3. cd backend, run python3 app.py
-
-## everything below is from template
-
+# Chatbot UI
 
 Chatbot UI is an open source chat UI for AI models.
 

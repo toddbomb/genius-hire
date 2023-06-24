@@ -20,7 +20,6 @@ export interface HomeInitialState {
   prompts: Prompt[];
   temperature: number;
   showChatbar: boolean;
-  showPromptbar: boolean;
   currentFolder: FolderInterface | undefined;
   messageError: boolean;
   searchTerm: string;
@@ -33,7 +32,7 @@ export const initialState: HomeInitialState = {
   apiKey: '',
   loading: false,
   pluginKeys: [],
-  lightMode: 'dark',
+  lightMode: 'light',
   messageIsStreaming: false,
   modelError: null,
   models: [],
@@ -43,7 +42,6 @@ export const initialState: HomeInitialState = {
   currentMessage: undefined,
   prompts: [],
   temperature: 1,
-  showPromptbar: true,
   showChatbar: true,
   currentFolder: undefined,
   messageError: false,

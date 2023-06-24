@@ -39,23 +39,16 @@ const handler = async (req: Request): Promise<Response> => {
     let tokenCount = prompt_tokens.length;
     let messagesToSend: Message[] = [];
 
-    for (let i = messages.length - 1; i >= 0; i--) {
-      const message = messages[i];
-      const tokens = encoding.encode(message.content);
 
-      if (tokenCount + tokens.length + 1000 > model.tokenLimit) {
-        break;
-      }
-      tokenCount += tokens.length;
-      messagesToSend = [message, ...messagesToSend];
-    }
+    messagesToSend = [messages[messages.length - 1]];
+    
 
     encoding.free();
 
     // const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
-
+    
     // return new Response(stream);
-
+    try {
     const response = await fetch('http://127.0.0.1:5000/chat', {
       method: 'POST',
       headers: {
@@ -64,7 +57,11 @@ const handler = async (req: Request): Promise<Response> => {
       body: JSON.stringify([messagesToSend]),
     });
     return response;
-    
+    } catch (error) {
+      const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
+      return new Response(stream);
+    }
+
   } catch (error) {
     console.error(error);
     if (error instanceof OpenAIError) {
