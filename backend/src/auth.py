@@ -1,7 +1,7 @@
 from flask import Blueprint, request
 from src.route import pick_tool
 from src.database.chatHistory import memory
-from query_data import get_pdf_qa_chain_response
+from src.util.query_data import get_pdf_qa_chain_response
 
 auth = Blueprint('auth',__name__,url_prefix="/chat")
 
