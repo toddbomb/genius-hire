@@ -52,9 +52,19 @@ const handler = async (req: Request): Promise<Response> => {
 
     encoding.free();
 
-    const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
+    // const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
 
-    return new Response(stream);
+    // return new Response(stream);
+
+    const response = await fetch('http://127.0.0.1:5000/chat', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify([messagesToSend]),
+    });
+    return response;
+    
   } catch (error) {
     console.error(error);
     if (error instanceof OpenAIError) {
