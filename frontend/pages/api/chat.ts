@@ -56,11 +56,15 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify([messagesToSend]),
     });
-    return response;
-    } catch (error) {
-      const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
-      return new Response(stream);
+    if (!response.ok) {
+      throw new Error('Request failed with status ' + response.status);
     }
+  
+    return response;
+  } catch (error) {
+    const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
+    return new Response(stream);
+  }
 
   } catch (error) {
     console.error(error);

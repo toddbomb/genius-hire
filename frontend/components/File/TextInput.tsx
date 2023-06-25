@@ -1,0 +1,140 @@
+import React, {
+    Dispatch,
+    SetStateAction,
+    useCallback,
+    useState,
+    memo,
+    useRef,
+  } from "react";
+  import axios from "axios";
+  import { ArrowUpTrayIcon } from "@heroicons/react/24/outline";
+  import { compact } from "lodash";
+  
+  import LoadingText from "./LoadingText";
+  import { FileLite } from "@/types/file";
+  import FileViewerList from "./FileViewerList";
+  
+function TextInputArea() {
+const [isOpen, setIsOpen] = useState(false);
+const [title, setTitle] = useState('');
+const [text, setText] = useState('');
+const [error, setError] = useState('');
+
+const handleButtonClick = () => {
+    setIsOpen(true);
+    setTitle('');
+    setText('');
+    setError('');
+};
+
+const handleTitleChange = (event) => {
+    setTitle(event.target.value);
+};
+
+const handleTextChange = (event) => {
+    setText(event.target.value);
+};
+
+const handleSubmit = () => {
+    if (title.trim() === '') {
+    setError('Please enter job title.');
+    return;
+    }
+
+    if (text.trim() === '') {
+    setError('Please enter job details.');
+    return;
+    }
+    
+    // Process the submitted title and text (e.g., send them to a server, update state, etc.)
+
+    handleFileUpload();
+
+    setIsOpen(false);
+    setTitle('');
+    setText('');
+    setError('');
+};
+
+const handleFileUpload = async () => {
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('text', text);
+
+    try {
+      const response = await fetch('http://127.0.0.1:5000/text', {
+        method: 'POST',
+        body: formData,
+      });
+
+      // Process the response as needed
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle the error
+    }
+  };
+
+const handleClose = () => {
+setIsOpen(false); 
+};
+
+return (
+    <div>
+    {!isOpen && (
+        <button
+        className={`w-[240px] border-[#F7F5E9] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg hover:bg-white hover:bg-opacity-80 hover:text-[#252425]  font-semibold bg-[#F7F5E9]`}
+        onClick={handleButtonClick}
+        >
+        Add Job Description
+        </button>
+    )}
+
+    {isOpen && (
+        <div className={`w-[240px] border-[#F7F5E9] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg font-semibold bg-[#F7F5E9]`}>
+            <div>
+                <label htmlFor="title-input" className="flex flex-col items-center justify-center text-black">
+                <span className="font-semibold items-center justify-center">Job Title</span>
+                <input
+                    id="title-input"
+                    type="text"
+                    className="w-full mt-2 p-2 border border-gray-300 rounded"
+                    value={title}
+                    onChange={handleTitleChange}
+                />
+                </label>
+            </div>
+
+            <div className="mt-4">
+                <label htmlFor="text-box" className="flex flex-col items-center justify-center text-black">
+                <span className="font-semibold items-center justify-center">Details</span>
+                <textarea
+                    id="text-box"
+                    className="resize-none w-full h-300 mt-2 p-2 border border-gray-300 rounded"
+                    value={text}
+                    onChange={handleTextChange}
+                ></textarea>
+                </label>
+            </div>
+
+        {error && (
+            <div className="flex items-center justify-center w-full mt-4">
+            <p className="text-sm text-red-500">{error}</p>
+            </div>
+        )}
+
+        <div className="flex items-center justify-center w-full mt-4">
+            <button 
+            className="bg-blue-500 text-white px-4 py-2 mr-2 rounded"
+            onClick={handleClose}>Close</button>
+            
+            <button
+            className="bg-blue-500 text-white px-4 py-2 ml-2 rounded"
+            onClick={handleSubmit}> Submit </button>
+        </div>
+        </div>
+    )}
+    </div>
+);
+}
+
+export default TextInputArea;

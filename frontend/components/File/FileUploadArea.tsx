@@ -167,44 +167,48 @@ function FileUploadArea(props: FileUploadAreaProps) {
   );
 
   return (
-    <div className={`w-[200px] border-[#F7F5E9] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg hover:bg-white hover:bg-opacity-80 hover:text-[#252425]  font-semibold bg-[#F7F5E9]`}>
-      <div className="flex flex-row items-center justify-center">
-      <img src="upload.png" width="22px" height="22px" style={{ marginRight: '6px' }} alt="Upload Document" />
-      <label
-        htmlFor="dropzone-file"
-        ref={dropzoneRef}
-        onDragEnter={handleDragEnter}
-        onDragOver={handleDragOver}
-        onDragLeave={handleDragLeave}
-        onDrop={handleDrop}
-      >
-        <div className="flex flex-col items-center justify-center text-black">
-          {loading ? (
-            <LoadingText className="font-semibold items-center text-black justify-center" text="Uploading..." />
-          ) : (
-            <div>
-                <span className="font-semibold items-center justify-center">Upload Document</span>
-              <input
-                id="dropzone-file"
-                type="file"
-                className="hidden"
-                multiple
-                onChange={(event) => handleFileChange(event.target.files)}
-              />
-            </div>
-          )}
+    <div>
+      <div className={`w-[240px] border-[#F7F5E9] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg hover:bg-white hover:bg-opacity-80 hover:text-[#252425]  font-semibold bg-[#F7F5E9]`}>
+        <div className="flex flex-row items-center justify-center">
+        <img src="upload.png" width="22px" height="22px" style={{ marginRight: '6px' }} alt="Upload Document" />
+        <label
+          htmlFor="dropzone-file"
+          ref={dropzoneRef}
+          onDragEnter={handleDragEnter}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+        >
+          <div className="flex flex-col items-center justify-center text-black">
+            {loading ? (
+              <LoadingText className="font-semibold items-center text-black justify-center" text="Uploading..." />
+            ) : (
+              <div>
+                  <span className="font-semibold items-center justify-center">Upload Resumes</span>
+                <input
+                  id="dropzone-file"
+                  type="file"
+                  className="hidden"
+                  multiple
+                  onChange={(event) => handleFileChange(event.target.files)}
+                />
+              </div>
+            )}
+          </div>
+        </label>
         </div>
-      </label>
-      </div>
 
-      {error && (
-        <div className="flex items-center justify-center w-full mt-4">
-          <p className="text-sm text-red-500">{error}</p>
+        {error && (
+          <div className="flex items-center justify-center w-full mt-4">
+            <p className="text-sm text-red-500">{error}</p>
+          </div>
+        )}
+
         </div>
-      )}
-
+        <FileViewerList files={files} title="Uploaded Files" /> 
       {/* <FileViewerList files={files} title="Uploaded Files" /> */}
     </div>
+    
   );
 }
 

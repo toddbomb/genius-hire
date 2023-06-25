@@ -428,17 +428,8 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                 <div className="flex items-center">
                   <img src="logo6.png" width="160" height="20"/>
                 </div>
-                <div className="flex items-center justify-center gap-4">
-                  | Invoked Chain... |
-                </div>
-                
-                <div className="flex items-center justify-end">
 
-                  <FileUploadArea
-                      handleSetFiles={setFiles}
-                      maxNumFiles={75}
-                      maxFileSizeMB={30}
-                    />
+                <div className="flex items-center justify-end">
                   
                   <button
                     className="ml-2 cursor-pointer hover:opacity-80 flex items-center justify-center w-20px h-20px border-[#F7F5E9] border-opacity-80 text-white px-[5px] py-[5px] rounded-lg hover:bg-white hover:text-[#252425] bg-[#F7F5E9]"

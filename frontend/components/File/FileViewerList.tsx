@@ -58,7 +58,7 @@ function FileViewerList(props: FileViewerListProps) {
             leaveFrom="transform translate-y-0 opacity-100"
             leaveTo="transform translate-y-4 opacity-0"
           >
-            <div className="text-sm text-gray-500 space-y-2">
+            <div className="text-sm text-white space-y-2">
               {props.files.map((file) => (
                 <File
                   key={file.name}
