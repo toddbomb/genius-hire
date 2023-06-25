@@ -142,7 +142,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
           )}
         </div>
 
-        <div className="prose mt-[-2px] w-full dark:prose-invert">
+        <div className="prose mt-[1px] w-full dark:prose-invert text-xl" style={{ fontFamily: 'Karla, sans-serif' }}>
           {message.role === 'user' ? (
             <div className="flex w-full">
               {isEditing ? (
@@ -245,7 +245,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
                       </table>
                     );
                   },
-                  th({ children }) {
+                  th({ children }) {roboto
                     return (
                       <th className="break-words border border-black bg-gray-500 px-3 py-1 text-white dark:border-white">
                         {children}

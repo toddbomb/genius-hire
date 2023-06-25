@@ -258,7 +258,7 @@ export const ChatInput = ({
   }, []);
 
   return (
-    <div className="absolute bottom-0 left-0 w-full border-transparent bg-gradient-to-b from-transparent via-white to-white pt-6 dark:border-white/20 dark:via-[#343541] dark:to-[#343541] md:pt-2">
+    <div className="absolute bottom-4 left-0 w-full border-transparent bg-gradient-to-b from-transparent via-transparent to-transparent pt-6 dark:border-white/20 dark:via-[#343541] dark:to-[#343541] md:pt-2">
       <div className={`w-full border-[#E0A0D4] mb-8 border-opacity-80 text-black px-[5px] py-[5px] rounded-lg font-semibold`}>
         <ButtonCarousel/>
       </div>

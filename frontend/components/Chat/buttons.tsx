@@ -25,7 +25,7 @@ function ButtonCarousel() {
       const carouselWidth = buttonContainer.offsetWidth;
 
       if (buttonsWidth > carouselWidth) {
-        const animationDuration = buttonsWidth / 50; // Adjust the value to control the carousel speed
+        const animationDuration = buttonsWidth / 100; // Adjust the value to control the carousel speed
         buttonContainer.style.animation = `carousel-animation ${animationDuration}s linear infinite`;
       } else {
         buttonContainer.style.animation = 'none';
@@ -59,11 +59,11 @@ function ButtonCarousel() {
         className="w-[200%] h-10 relative"
         ref={buttonContainerRef}
       >
-        <div className="w-[200%] flex items-center h-20 justify-between absolute left-0 animate gap-20 animate-carousel">
+        <div className="w-[200%] flex items-center h-20 justify-between absolute left-0 animate gap-1 animate-carousel">
           {buttonData.map((button) => (
             <div className="flex justify-center items-start w-[20rem]" key={button.id}>
               <button
-                className="carousel-button px-[8px] py-[8px] rounded-lg hover:bg-white hover:bg-opacity-80 hover:text-[#252425]"
+                className="carousel-button px-[12px] py-[6px] rounded-lg hover:bg-[#E0A0D4] hover:bg-opacity-80 hover:text-[#252425]"
                 onClick={() => handleButtonClick(button.id)}
                 style={{ whiteSpace: 'nowrap', border: '1px solid black',}}
               >

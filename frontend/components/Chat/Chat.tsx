@@ -353,7 +353,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
 
   return (
     <div className="relative flex-1 overflow-hidden" style={{
-      backgroundImage: 'url(/white.gif)',
+      backgroundImage: 'url(/bkd.png)',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
@@ -361,7 +361,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
       {!(apiKey || serverSideApiKeyIsSet) ? (
         <div className="mx-auto flex h-full w-[300px] flex-col justify-center space-y-6 sm:w-[600px]">
           <div className="text-center text-4xl font-bold text-black dark:text-white">
-            <img src="logo4.png"></img>
+            <img src="logo0.png"></img>
           </div>
           <div className="text-center text-lg text-black dark:text-white">
       {/* <div className="mb-8">{`Chatbot UI is an open source clone of OpenAI's ChatGPT UI.`}</div> */}
@@ -408,8 +408,8 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
             {selectedConversation?.messages.length === 0 ? (
               <>
                 <div className="h-10"></div>
-                <div className="flex justify-center items-center mt-5">
-                    <img src="/logo4.png" width="440"/>
+                <div className="flex justify-center items-center mt-10">
+                    <img src="/logo0.png" width="300"/>
                 </div>
                 <div className="text-center text-3xl IBM Plex Mono font-semibold text-[#6626F4] pt-4">
                   {models.length === 0 ? (
@@ -426,13 +426,13 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
 
               <div className="sticky top-0 z-10 flex justify-between bg-[#181817] py-2 px-[10px] text-[13px] text-white dark:border-none dark:bg-[#444654] dark:text-neutral-200 h-12 shadow-lg">
                 <div className="flex items-center">
-                  <img src="logo6.png" width="160" height="20"/>
+                  <img src="logo1.png" width="160" height="20"/>
                 </div>
 
                 <div className="flex items-center justify-end">
                   
                   <button
-                    className="ml-2 cursor-pointer hover:opacity-80 flex items-center justify-center w-20px h-20px border-[#F7F5E9] border-opacity-80 text-white px-[5px] py-[5px] rounded-lg hover:bg-white hover:text-[#252425] bg-[#F7F5E9]"
+                    className="ml-2 cursor-pointer hover:opacity-80 flex items-center justify-center w-20px h-20px text-white px-[5px] py-[5px] rounded-lg hover:bg-white hover:text-[#252425] bg-[#F7F5E9]"
                     onClick={onClearAll}
                   >
                     <img src="broom.png" width="22px" height="22px" alt="Clear All" />

@@ -81,7 +81,7 @@ const Sidebar = <T,>({
 
   return (
     <div>
-      <div className={`sticky top-10 fixed z-40 flex h-full w-[300px] flex-none flex-col space-y-2 bg-[#181817] p-2 text-[14px] transition-all sm:relative sm:top-0 shadow-sm shadow-slate-500`}>
+      <div className={`sticky top-10 fixed z-40 flex h-full w-[300px] flex-none flex-col space-y-2 bg-[#181817] p-2 text-[14px] transition-all sm:relative sm:top-0 rounded shadow`}>
 
 {/*       <div className="flex items-center pt-5 ml-5 mr-5">
           <span className="text-[16px] font-semibold text-gray-800">
@@ -123,15 +123,15 @@ const Sidebar = <T,>({
 
         </div>
 
-        <div className="flex items-center pt-10 ml-5 mr-5">
-          <span className="text-[16px] font-semibold text-white">
-              Welcome to Genius-Hire!
+        <div className="flex items-center mb-12 ml-5 mr-5">
+          <span className="text-[16px] font-semibold text-white" style={{ fontFamily: 'Roboto Mono, sans-serif' }}>
+            Welcome to HR-IQ!
           </span>
         </div>
 
-        <div className="flex items-center mb-6 ml-5 mr-5">
-          <span className="text-[12px] text-white text-sm">
-            Upload resumes and a job description, and let our intelligent chatbot analyze the data, 
+        <div className="flex items-center pt-3 mb-12 ml-6 mr-6">
+          <span className="text-[12px] text-white text-sm" style={{ fontFamily: 'Roboto Mono, sans-serif' }}>
+            Upload resumes and a job description, and let our intelligent chatbot analyze the data,
             generate reports, and provide customized interview questions.
           </span>
         </div>
@@ -149,17 +149,17 @@ const Sidebar = <T,>({
         </div>
 
         <div className="flex items-center pt-10 ml-5 mr-5">
-          <span className="text-[16px] font-semibold text-white">
+          <span className="text-[16px] font-semibold text-white" style={{fontFamily: 'Roboto Mono, sans-serif'}}>
             Not hiring right now? 
           </span>
         </div>
 
-        <div className="flex items-center mb-6 pr-2 ml-5 mr-5">
-          <span className="text-[12px] text-white text-sm">
-            That's okay. You can test Genuis-Hire with some resumes we have on file. 
+        <div className="flex items-center mb-6 pt-3  pr-2 ml-5 mr-5">
+          <span className="text-[12px] text-white text-sm" style={{ fontFamily: 'Roboto Mono, sans-serif' }}>
+            That's okay. You can test HR-IQ with some resumes we have on file. 
           </span>
 
-          <ToggleButton/>
+          <ToggleButton />
         </div>
 
         <div className="flex items-center pt-5 ml-5 mr-5">

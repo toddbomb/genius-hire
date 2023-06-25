@@ -15,12 +15,17 @@ frontend/build
 # misc
 frontend/.DS_Store
 frontend*.pem
+/.DS_Store
+/backend/.DS_Store
+/backend/src/.DS_Store
 # debug
 frontend/npm-debug.log*
 frontend/yarn-debug.log*
 frontend/yarn-error.log*
 frontend/.pnpm-debug.log*
 # local env files
+/.DS_Store
+/backend/.DS_Store
 
 # vercel
 frontend/.vercel
