@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import FileUploadArea from "@/components/File/FileUploadArea"; //"../components/File/FileUploadArea";
 import TextInputArea from "@/components/File/TextInput"; 
 import FileDownloadArea from "@/components/File/FileDownloadArea"; 
+import ToggleButton from "@/components/File/toggle"
 import { FileLite } from "@/types/file";
 import Head from "next/head";
 import DbUploadArea from "@/components/File/DbUploadArea"; 
@@ -146,7 +147,21 @@ const Sidebar = <T,>({
         <div className="flex items-center pt-5 ml-5 mr-5">
           <TextInputArea/>
         </div>
-        
+
+        <div className="flex items-center pt-10 ml-5 mr-5">
+          <span className="text-[16px] font-semibold text-white">
+            Not hiring right now? 
+          </span>
+        </div>
+
+        <div className="flex items-center mb-6 pr-2 ml-5 mr-5">
+          <span className="text-[12px] text-white text-sm">
+            That's okay. You can test Genuis-Hire with some resumes we have on file. 
+          </span>
+
+          <ToggleButton/>
+        </div>
+
         <div className="flex items-center pt-5 ml-5 mr-5">
           <FileDownloadArea/>
         </div>

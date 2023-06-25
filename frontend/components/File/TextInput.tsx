@@ -124,11 +124,11 @@ return (
 
         <div className="flex items-center justify-center w-full mt-4">
             <button 
-            className="bg-blue-500 text-white px-4 py-2 mr-2 rounded"
+            className="bg-[#97D8D2] text-black px-4 py-2 mr-2 rounded"
             onClick={handleClose}>Close</button>
             
             <button
-            className="bg-blue-500 text-white px-4 py-2 ml-2 rounded"
+            className="bg-[#7AEA8E] text-black px-4 py-2 ml-2 rounded"
             onClick={handleSubmit}> Submit </button>
         </div>
         </div>
