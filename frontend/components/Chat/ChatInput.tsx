@@ -23,6 +23,7 @@ import { Plugin } from '@/types/plugin';
 import { Prompt } from '@/types/prompt';
 
 import HomeContext from '@/pages/api/home/home.context';
+import ButtonCarousel from './buttons'
 
 import { PluginSelect } from './PluginSelect';
 import { PromptList } from './PromptList';
@@ -258,7 +259,10 @@ export const ChatInput = ({
 
   return (
     <div className="absolute bottom-0 left-0 w-full border-transparent bg-gradient-to-b from-transparent via-white to-white pt-6 dark:border-white/20 dark:via-[#343541] dark:to-[#343541] md:pt-2">
-      <div className="stretch mx-2 mt-4 flex flex-row gap-3 last:mb-2 md:mx-4 md:mt-[52px] md:last:mb-6 lg:mx-auto lg:max-w-3xl">
+      <div className={`w-full border-[#E0A0D4] mb-8 border-opacity-80 text-black px-[5px] py-[5px] rounded-lg font-semibold`}>
+        <ButtonCarousel/>
+      </div>
+      <div className="stretch mx-2 mt-4 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-3xl">
         {/* Removed Regenerate Button
         {messageIsStreaming && (
           <button
@@ -306,7 +310,7 @@ export const ChatInput = ({
               }`,
             }}
             placeholder={
-              t('e.g. What were the takeaways from the Q1 planning meeting?') || ''
+              t('Type your question here') || ''
             }
             value={content}
             rows={1}
