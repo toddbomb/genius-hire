@@ -2,25 +2,28 @@ import React, { useState } from 'react';
 
 function ToggleButton() {
   const [isActive, setIsActive] = useState(false);
-
+  
   const handleToggle = async () => {
+    const data = { isActive };
+    const json = JSON.stringify(data);
+
     try {
-      // Perform the backend action based on the toggle state
-      if (isActive) {
-        // Make an API call to trigger the backend action when the toggle is active
-        await fetch('http://127.0.0.1:5000/action', {
-          method: 'POST',
-        });
-      } else {
-        // Handle the case when the toggle is inactive
-        // e.g., perform any necessary cleanup or reset operations
-      }
+      const response = await fetch('http://127.0.0.1:5000/active/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+          },
+          body: json,
+      });
+
+      // Process the response as needed
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle the error
+    }
 
       // Toggle the state after the API call is completed
       setIsActive(!isActive);
-    } catch (error) {
-      console.error('Error:', error);
-    }
   };
 
   return (
