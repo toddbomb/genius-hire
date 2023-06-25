@@ -9,7 +9,6 @@ from langchain.memory import ConversationBufferMemory
 from langchain.prompts import PromptTemplate
 from langchain.vectorstores import Pinecone
 
-os.environ['OPENAI_API_KEY'] = "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"  # replace with your own API Key
 
 def get_pdf_qa_chain_response(query):
 
