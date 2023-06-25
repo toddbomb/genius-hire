@@ -57,14 +57,16 @@ const handleSubmit = () => {
 };
 
 const handleFileUpload = async () => {
-    const formData = new FormData();
-    formData.append('title', title);
-    formData.append('text', text);
+    const data = { title, text };
+    const json = JSON.stringify(data);
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/text', {
+      const response = await fetch('http://127.0.0.1:5000/text/', {
         method: 'POST',
-        body: formData,
+        headers: {
+            'Content-Type': 'application/json'
+          },
+          body: json,
       });
 
       // Process the response as needed

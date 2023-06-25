@@ -9,7 +9,7 @@ def upload_file():
 
     # call_embeddings(file) ??????
     print(file_object)
-    print(file_object.file)
+    # print(file_object.file)
     #call_embeddings(file_object)
     
     return jsonify({"POST":"test"})
