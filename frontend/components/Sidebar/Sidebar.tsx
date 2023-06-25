@@ -90,36 +90,9 @@ const Sidebar = <T,>({
         </div> */}
 
 
-        <div className="flex items-center pl-5 pr-5">
-            <button
-              className="rounded-sm p-1 text-neutral-800 opacity-60 hover:bg-neutral-200 hover:text-neutral-900 dark:bg-opacity-50 dark:text-neutral-100 dark:hover:text-neutral-200"
-              onClick={() => setShowPluginSelect(!showPluginSelect)}
-              onKeyDown={(e) => {}}>
-              {plugin ? <IconBolt size={20} /> : <IconBolt size={20} />}
-            </button>
+        <div className="flex items-center pl-5 pr-5 pt-2 pb-8">
 
-        {showPluginSelect && (
-            <div className="rounded bg-white dark:bg-[#343541]">
-              <PluginSelect
-                plugin={plugin}
-                onKeyDown={(e: any) => {
-                  if (e.key === 'Escape') {
-                    e.preventDefault();
-                    setShowPluginSelect(true);
-                    textareaRef.current?.focus();
-                  }
-                }}
-                onPluginChange={(plugin: Plugin) => {
-                  setPlugin(plugin);
-                  setShowPluginSelect(true);
-
-                  if (textareaRef && textareaRef.current) {
-                    textareaRef.current.focus();
-                  }
-                }}
-              />
-            </div>
-          )}
+                  <img src="logo1.png" width="160" height="20"/>
 
         </div>
 
