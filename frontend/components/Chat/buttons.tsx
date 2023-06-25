@@ -49,9 +49,25 @@ function ButtonCarousel() {
     ];
   };
 
-  const handleButtonClick = async (buttonId) => {
-    // Handle button click event
-  };
+  const handleButtonClick = async (buttonText) => {
+      const data = { buttonText };
+      const json = JSON.stringify(data);
+
+      try {
+        const response = await fetch('http://127.0.0.1:5000/chat/', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+            },
+            body: json,
+        });
+
+        // Process the response as needed
+      } catch (error) {
+        console.error('Error:', error);
+        // Handle the error
+      }
+    };
  // rounded-lg font-semibold
   return (
     <div className="flex items-center justify-center">
@@ -61,10 +77,10 @@ function ButtonCarousel() {
       >
         <div className="w-[200%] flex items-center h-20 justify-between absolute left-0 animate gap-1 animate-carousel">
           {buttonData.map((button) => (
-            <div className="flex justify-center items-start w-[20rem]" key={button.id}>
+            <div className="flex justify-center items-start w-[20rem]" key={button.text}>
               <button
                 className="carousel-button px-[12px] py-[6px] rounded-lg hover:bg-[#E0A0D4] hover:bg-opacity-80 hover:text-[#252425]"
-                onClick={() => handleButtonClick(button.id)}
+                onClick={() => handleButtonClick(button.text)}
                 style={{ whiteSpace: 'nowrap', border: '1px solid black',}}
               >
                   

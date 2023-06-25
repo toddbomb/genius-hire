@@ -9,7 +9,10 @@ auth = Blueprint('auth',__name__,url_prefix="/chat")
 def chat():
     request_data = request.get_json()
 
-    query = request_data[0][0]['content']
+    try:
+        query = request_data[0][0]['content']
+    except:
+        query = request_data['buttonText']
 
     model_response = get_pdf_qa_chain_response(query=query)
     
