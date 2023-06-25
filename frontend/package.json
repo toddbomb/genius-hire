@@ -12,6 +12,7 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.21.10",
     "@dqbd/tiktoken": "^1.0.7",
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
