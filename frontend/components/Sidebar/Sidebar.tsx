@@ -125,6 +125,7 @@ const Sidebar = <T,>({
 
         <div className="flex items-center mb-12 ml-5 mr-5">
           <span className="text-[16px] font-semibold text-white" style={{ fontFamily: 'Roboto Mono, sans-serif' }}>
+            
             Welcome to HR-IQ!
           </span>
         </div>
