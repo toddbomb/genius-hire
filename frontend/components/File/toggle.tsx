@@ -26,10 +26,13 @@ function ToggleButton() {
   return (
     <button
       onClick={handleToggle}
-      className={`bg-${isActive ? 'green' : 'gray'}-500 text-white px-4 py-2 rounded`}
+      className={`bg-${isActive ? 'green' : 'gray'}-500 text-white px-4 py-1.5 rounded-lg text-[#181818] font-semibold  w-[240px]`}
+      style={{ backgroundColor: '#E0A0D4' }}
     >
       {isActive ? 'Deactivate' : 'Activate'}
     </button>
+
+
   );
 }
 
