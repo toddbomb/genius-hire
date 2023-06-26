@@ -34,7 +34,7 @@ const handleTitleChange = (event: ChangeEvent<HTMLInputElement>) => {
   };
 
   const handleTextChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
-    setTitle(event.target.value);
+    setText(event.target.value);
   };
 
   
