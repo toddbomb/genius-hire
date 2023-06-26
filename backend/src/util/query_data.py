@@ -7,7 +7,6 @@ from langchain.prompts import PromptTemplate
 from langchain.vectorstores import Pinecone
 from langchain.chains import RetrievalQA
 
-os.environ['OPENAI_API_KEY'] = "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"  # replace with your own API Key
 
 
 def get_pdf_qa_chain_response(query, job_description, filename):

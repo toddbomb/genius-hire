@@ -13,7 +13,7 @@ def create_app(test_config=None):
         app.config.from_mapping(SECRET_KEY=os.environ.get('SECRET_KEY'))
     else:
         app.config.from_mapping(test_config)
-    
+        app.debug = True
     
     app.register_blueprint(auth)
     app.register_blueprint(upload)
