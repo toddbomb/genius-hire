@@ -6,9 +6,12 @@ jobdesc = Blueprint('jobdesc',__name__,url_prefix="/text")
 def upload_file():
 
     job_description = request.get_json()
+    print(JD)
 
+    JD[0]  = job_description.get('title') + '\n' + job_description.get('text')
     
-    JD  = job_description.get('title') + '\n' + job_description.get('text')
+    print('--------')
+    print(JD)
     return jsonify({"POST":"test"})
     
     

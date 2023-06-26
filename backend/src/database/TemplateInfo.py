@@ -1,4 +1,4 @@
-JD = '''Company: HR-IQ.ai
+JD = ['''Company: HR-IQ.ai
 Location: Remote (HQ in New York)
 Role: AI Engineer
 HR-IQ, a cutting-edge AI startup, is seeking a highly skilled and motivated software engineer to join our rapidly growing team. We are revolutionizing the way organizations operate by empowering them to leverage the power of AI, and we need a talented engineer to help us bring our vision to life.
@@ -23,5 +23,4 @@ Understanding of cloud computing technologies and experience with AWS, Azure, or
 Track record of delivering successful products / working in a collaborative, fast-paced environment is a plus.
 
 Join the AI revolution with HR-IQ! As an AI Engineer, you will have the opportunity to make a significant impact on the future of AI and work with a talented and passionate team of experts. If you’re ready to take your software engineering skills to the next level, we want to hear from you!'''
-
-resumeName = "exresumes.pdf"
+,"exresumes.pdf"]
