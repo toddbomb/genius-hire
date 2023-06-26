@@ -5,7 +5,7 @@ function FileDownloadArea() {
 
   const handleDownload = async () => {
     try {
-      const response = await fetch('http://3.16.135.175/report', {
+      const response = await fetch('http://3.22.110.116/report', {
         method: 'GET',
       });
 

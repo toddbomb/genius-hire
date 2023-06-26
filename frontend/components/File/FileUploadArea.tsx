@@ -72,7 +72,7 @@ function FileUploadArea(props: FileUploadAreaProps) {
                     },
                   }
                 );
-                axios.post('http://3.16.135.175/upload/', formData, {
+                axios.post('http://3.22.110.116/upload/', formData, {
                   headers: {
                     'Content-Type': 'multipart/form-data'
                   }

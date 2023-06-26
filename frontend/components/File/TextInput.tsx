@@ -65,7 +65,7 @@ const handleFileUpload = async () => {
     const json = JSON.stringify(data);
 
     try {
-      const response = await fetch('http://3.16.135.175/text/', {
+      const response = await fetch('http://3.22.110.116/text/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
