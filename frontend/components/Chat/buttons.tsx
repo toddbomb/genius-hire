@@ -79,7 +79,7 @@ function ButtonCarousel() {
           {buttonData.map((button) => (
             <div className="flex justify-center items-start w-[20rem]" key={button.text}>
               <button
-                className="carousel-button px-[12px] py-[6px] rounded-lg hover:bg-[#E0A0D4] hover:bg-opacity-80 hover:text-[#252425]"
+                className="carousel-button px-[12px] py-[6px] rounded-lg hover:bg-[#E0A0D4] hover:bg-opacity-80 font-semibold hover:text-[#252425]"
                 onClick={() => handleButtonClick(button.text)}
                 style={{ whiteSpace: 'nowrap', border: '1px solid black',}}
               >
