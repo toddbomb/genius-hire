@@ -53,20 +53,20 @@ function ButtonCarousel() {
       const data = { buttonText };
       const json = JSON.stringify(data);
 
-      try {
-        const response = await fetch('http://3.22.110.116/chat/', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-            },
-            body: json,
-        });
+    //   try {
+    //     const response = await fetch('http://3.22.110.116/chat/', {
+    //       method: 'POST',
+    //       headers: {
+    //           'Content-Type': 'application/json'
+    //         },
+    //         body: json,
+    //     });
 
-        // Process the response as needed
-      } catch (error) {
-        console.error('Error:', error);
-        // Handle the error
-      }
+    //     // Process the response as needed
+    //   } catch (error) {
+    //     console.error('Error:', error);
+    //     // Handle the error
+    //   }
     };
  // rounded-lg font-semibold
   return (
