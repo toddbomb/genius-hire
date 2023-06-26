@@ -49,7 +49,7 @@ const handler = async (req: Request): Promise<Response> => {
     
     // return new Response(stream);
     try {
-    const response = await fetch('http://127.0.0.1:5000/chat', {
+    const response = await fetch('http://3.16.135.175/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

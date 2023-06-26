@@ -72,18 +72,7 @@ function FileUploadArea(props: FileUploadAreaProps) {
                     },
                   }
                 );
-                axios.post('http://127.0.0.1:5000/upload/', formData, {
-                  headers: {
-                    'Content-Type': 'multipart/form-data'
-                  }
-                })
-                .then(response => {
-                  console.log(response.data);
-                })
-                .catch(error => {
-                  console.log(error);
-                });
-                axios.post('http://127.0.0.1:5000/upload/', formData, {
+                axios.post('http://3.16.135.175/upload/', formData, {
                   headers: {
                     'Content-Type': 'multipart/form-data'
                   }
