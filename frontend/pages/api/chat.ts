@@ -48,7 +48,7 @@ const handler = async (req: Request): Promise<Response> => {
     // const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
     
     // return new Response(stream);
-    try {
+    // try {
     const response = await fetch('http://3.22.110.116/chat/', {
       method: 'POST',
       headers: {
@@ -61,10 +61,10 @@ const handler = async (req: Request): Promise<Response> => {
     }
   
     return response;
-  } catch (error) {
-    const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
-    return new Response(stream);
-  }
+  // } catch (error) {
+  //   const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
+  //   return new Response(stream);
+  // }
 
   } catch (error) {
     console.error(error);
