@@ -76,7 +76,7 @@ const Sidebar = <T,>({
   return (
     <div>
       <div
-        className={`sticky top-10 fixed z-40 flex h-full w-[316px] flex-none flex-col space-y-2 p-2 text-[14px] transition-all sm:relative sm:top-0`}
+        className={`sticky top-10 fixed z-40 flex h-full w-[314px] flex-none flex-col space-y-2 p-2 text-[14px] transition-all sm:relative sm:top-0`}
         style={{
           backgroundImage: `url('bkd.png')`,
           backgroundSize: 'cover',
@@ -104,7 +104,7 @@ const Sidebar = <T,>({
                   </span>
                 </div>
                 <div className="rounded-xl bg-[#181818] p-2">
-                  <div className="flex items-center pt-3 mb-0 ml-3 mr-6  shadow-sm">
+                  <div className="flex items-center pt-1 mb-0 ml-3 mr-6  shadow-sm">
                     <span
                       className="text-[12px] text-[#F7F6E9] text-sm"
                       style={{ fontFamily: 'Roboto Mono, sans-serif' }}
@@ -114,7 +114,7 @@ const Sidebar = <T,>({
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center pt-5 ml-5 mr-5  shadow-sm">
+                <div className="flex items-center pt-3 ml-5 mr-5  shadow-sm">
                   <FileUploadArea
                     handleSetFiles={setFiles}
                     maxNumFiles={75}
@@ -131,7 +131,7 @@ const Sidebar = <T,>({
 
             {/* BLOCK 2*/}
             <div className="rounded-xl bg-[#181818] p-1 mt-2 mb-2 ml-2 shadow-lg">
-                  <div className="flex items-center mb-1 mt-4 ml-3 mr-5">
+                  <div className="flex items-center mb-1 mt-4 ml-5 mr-0">
                     <span
                       className="text-[16px] font-semibold text-[#F7F6E9]"
                       style={{ fontFamily: 'Roboto Mono, sans-serif' }}
@@ -139,19 +139,19 @@ const Sidebar = <T,>({
                       Not hiring right now?
                     </span>
                   </div>
-                  <div className="flex items-center mb-2 pt-3 pr-2 ml-3 mr-5">
+                  <div className="flex items-center mb-2 pt-2 pr-2 ml-5 mr-5">
                     <span className="text-[12px] text-[#F7F6E9] text-sm" style={{ fontFamily: 'Roboto Mono, sans-serif' }}>
                         That's okay. You can test HR-IQ right away with some resumes we have on file.
                       </span>
                   </div>
-                  <div className="flex items-center justify-center mb-6 pt-3 pr-2 ml-3 mr-5">
+                  <div className="flex items-center justify-center mb-5 pt-2.5 pr-2 ml-5 mr-5">
                     <ToggleButton />
                   </div>
             </div>
 
             {/* BLOCK 3*/}
             <div className="rounded-xl bg-[#181818] p-1 mt-4 mb-2 ml-2">
-                  <div className="flex items-center mb-1 mt-4 ml-3 mr-5">
+                  <div className="flex items-center mb-1 mt-4 ml-5 mr-5">
                     <span
                       className="text-[16px] font-semibold text-[#F7F6E9]"
                       style={{ fontFamily: 'Roboto Mono, sans-serif' }}
@@ -159,7 +159,7 @@ const Sidebar = <T,>({
                       About HR-IQ
                     </span>
                   </div>
-                  <div className="flex items-center mb-5 pt-3 pr-2 ml-3 mr-5">
+                  <div className="flex items-center mb-5 pt-3 pr-2 ml-5 mr-5">
                     <span className="text-[12px] text-[#F7F6E9] text-sm" style={{ fontFamily: 'Roboto Mono, sans-serif' }}>
                      About Content Here   
                     </span>
