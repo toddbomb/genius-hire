@@ -5,6 +5,7 @@ import React, {
     useState,
     memo,
     useRef,
+    ChangeEvent
   } from "react";
   import axios from "axios";
   import { ArrowUpTrayIcon } from "@heroicons/react/24/outline";
@@ -27,13 +28,16 @@ const handleButtonClick = () => {
     setError('');
 };
 
-const handleTitleChange = (event) => {
-    setTitle(event.target.value);
-};
 
-const handleTextChange = (event) => {
-    setText(event.target.value);
-};
+const handleTitleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setTitle(event.target.value);
+  };
+
+  const handleTextChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+    setTitle(event.target.value);
+  };
+
+  
 
 const handleSubmit = () => {
     if (title.trim() === '') {

@@ -10,6 +10,7 @@ import {
   useState,
 } from 'react';
 import toast from 'react-hot-toast';
+import { FileLite } from '@/types/file';
 
 import { useTranslation } from 'next-i18next';
 

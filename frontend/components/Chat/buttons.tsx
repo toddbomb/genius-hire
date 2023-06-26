@@ -2,8 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 //import './button.css';
 
 function ButtonCarousel() {
-  const [buttonData, setButtonData] = useState([]);
-  const buttonContainerRef = useRef(null);
+  const [buttonData, setButtonData] = useState<{ id: number; text: string; }[]>([]);
+  const buttonContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetchDataFromBackend().then(data => {
@@ -49,7 +49,7 @@ function ButtonCarousel() {
     ];
   };
 
-  const handleButtonClick = async (buttonText) => {
+  const handleButtonClick = async (buttonText : unknown) => {
       const data = { buttonText };
       const json = JSON.stringify(data);
 

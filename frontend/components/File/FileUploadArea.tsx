@@ -181,7 +181,7 @@ function FileUploadArea(props: FileUploadAreaProps) {
         >
           <div className="flex flex-col items-center justify-center text-black">
             {loading ? (
-              <LoadingText className="font-semibold items-center text-black justify-center" text="Uploading..." />
+              <LoadingText  text="Uploading..." />
             ) : (
               <div>
                   <span className="font-semibold items-center justify-center">Upload Résumés</span>

@@ -368,6 +368,7 @@ const Home = ({
         >
           <div className="fixed top-0 w-full sm:hidden">
             <Navbar
+              isVisible={true}
               selectedConversation={selectedConversation}
               onNewConversation={handleNewConversation}
             />

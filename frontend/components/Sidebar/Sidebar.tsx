@@ -35,7 +35,6 @@ interface Props<T> {
   handleCreateItem: () => void;
   handleCreateFolder: () => void;
   handleDrop: (e: any) => void;
-  textareaRef: MutableRefObject<HTMLTextAreaElement | null>;
 }
 
 const Sidebar = <T,>({
@@ -51,8 +50,7 @@ const Sidebar = <T,>({
   toggleOpen,
   handleCreateItem,
   handleCreateFolder,
-  handleDrop,
-  textareaRef,
+  handleDrop
 }: Props<T>) => {
   const { t } = useTranslation('promptbar');
 
