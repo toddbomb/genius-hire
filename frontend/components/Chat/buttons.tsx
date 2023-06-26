@@ -1,13 +1,14 @@
 import React, { useEffect, useState, useRef } from 'react';
+//import './button.css';
 
 function ButtonCarousel() {
   const [buttonData, setButtonData] = useState([]);
   const buttonContainerRef = useRef(null);
 
   useEffect(() => {
-    fetchDataFromBackend().then((data) => {
+    fetchDataFromBackend().then(data => {
       setButtonData(data);
-    }).catch((error) => {
+    }).catch(error => {
       console.error('Error:', error);
       // Handle the error
     });
@@ -25,7 +26,7 @@ function ButtonCarousel() {
 
       if (buttonsWidth > carouselWidth) {
         const animationDuration = buttonsWidth / 100; // Adjust the value to control the carousel speed
-        buttonContainer.style.animation = `carousel-animation ${animationDuration}s steps(1, end) infinite`;
+        buttonContainer.style.animation = `carousel-animation ${animationDuration}s linear infinite`;
       } else {
         buttonContainer.style.animation = 'none';
       }
@@ -40,51 +41,52 @@ function ButtonCarousel() {
     // return data;
 
     // For now, let's use a mock data array
-    const initialData = [
+    return [
       { id: 1, text: 'What candidates have the most skills related to the job description?' },
       { id: 2, text: 'List candidates with leadership experience.' },
       { id: 3, text: 'What candidates have worked in react.js?' },
       { id: 4, text: 'Generate a framework for evaluating candidates during interview.' },
     ];
-
-    // Create a new array with the first element moved to the end
-    const updatedData = [...initialData.slice(1), initialData[0]];
-
-    return updatedData;
   };
 
   const handleButtonClick = async (buttonText) => {
-    const data = { buttonText };
-    const json = JSON.stringify(data);
+      const data = { buttonText };
+      const json = JSON.stringify(data);
 
-    try {
-      const response = await fetch('http://127.0.0.1:5000/chat/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: json,
-      });
+      try {
+        const response = await fetch('http://127.0.0.1:5000/chat/', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+            },
+            body: json,
+        });
 
-      // Process the response as needed
-    } catch (error) {
-      console.error('Error:', error);
-      // Handle the error
-    }
-  };
-
+        // Process the response as needed
+      } catch (error) {
+        console.error('Error:', error);
+        // Handle the error
+      }
+    };
+ // rounded-lg font-semibold
   return (
     <div className="flex items-center justify-center">
-      <div className="w-full overflow-x-auto">
-        <div className="flex items-center justify-between px-4" ref={buttonContainerRef}>
+      <div
+        className="w-[200%] h-10 relative"
+        ref={buttonContainerRef}
+      >
+        <div className="w-[300%] flex items-center h-20 justify-between absolute left-0 animate gap-1 animate-carousel">
           {buttonData.map((button) => (
-            <button
-              key={button.id}
-              className="px-4 py-2 rounded-lg hover:bg-[#E0A0D4] hover:bg-opacity-80 hover:text-[#252425] mr-4 border font-semibold border-[#181818] border-1.5"
-              onClick={() => handleButtonClick(button.text)}
-            >
-              {button.text}
-            </button>
+            <div className="flex justify-center items-start w-[20rem]" key={button.text}>
+              <button
+                className="carousel-button px-[12px] py-[6px] rounded-lg hover:bg-[#E0A0D4] hover:bg-opacity-80 hover:text-[#252425]"
+                onClick={() => handleButtonClick(button.text)}
+                style={{ whiteSpace: 'nowrap', border: '1px solid black',}}
+              >
+                  
+                {button.text}
+              </button>
+            </div>
           ))}
         </div>
       </div>
