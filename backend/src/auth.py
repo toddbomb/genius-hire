@@ -1,5 +1,4 @@
 from flask import Blueprint, request
-from src.route import pick_tool
 from src.database.chatHistory import memory
 from src.util.query_data import get_pdf_qa_chain_response
 
