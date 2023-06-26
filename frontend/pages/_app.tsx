@@ -18,14 +18,17 @@ function App({ Component, pageProps }: AppProps<{}>) {
     >
       <Toaster />
       <ClerkProvider
-        appearance={
-          {
+        appearance={{
           layout: {
             logoImageUrl: "logo2.png",
             logoPlacement: "inside",
-              }
-          }
-        }
+          },
+          elements: {
+            formButtonPrimary: {
+              backgroundColor: "#181818",
+            },
+          },
+        }}
       >
         <div className="flex flex-col justify-center items-center min-h-screen">
           <div className="flex items-center mb-4">
