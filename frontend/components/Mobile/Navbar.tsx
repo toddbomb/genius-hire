@@ -19,6 +19,7 @@ export const Navbar: FC<Props> = ({
     return null; // Return null if isVisible is false
   }
 
+  {/* Removed top mobile navbar
   return (
     <nav className="flex w-full justify-between bg-[#202123] py-3 px-4">
       <div className="mr-4"></div>
@@ -33,4 +34,5 @@ export const Navbar: FC<Props> = ({
       />
     </nav>
   );
+  */}
 };
