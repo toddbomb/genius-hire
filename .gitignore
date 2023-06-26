@@ -26,6 +26,7 @@ frontend/.pnpm-debug.log*
 # local env files
 /.DS_Store
 /backend/.DS_Store
+/frontend/.env.local
 /backend/.env
 # vercel
 frontend/.vercel

@@ -13,8 +13,8 @@ def upload_file():
     file_object = request.files.get('file')
     file_name = file_object.filename
 
-    print(request)
-    print(file_object)
+    # print(request)
+    # print(file_object)
     print(file_name)
 
     print('============')
@@ -41,8 +41,9 @@ def upload_file():
 
         pdf_texts.append(text)
 
-        print(text)
-    print(len(pdf_texts), pdf_texts)
+        # print(text)
+
+    # print(len(pdf_texts), pdf_texts)
     vectorstore = Pinecone.from_texts(pdf_texts, embeddings, index_name=index_name, namespace=file_name)
 
 
@@ -51,7 +52,7 @@ def upload_file():
 
 
     # call_embeddings(file) ??????
-    print(file_object)
+    # print(file_object)
     # print(file_object.file)
     #call_embeddings(file_object)
     
