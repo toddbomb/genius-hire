@@ -424,7 +424,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
             ) : (
               <>
 
-              <div className="sticky top-0 z-10 flex justify-between bg-[#181817] py-2 px-[10px] text-[13px] text-white dark:border-none dark:bg-[#444654] dark:text-neutral-200 h-12 shadow-lg">
+              <div className="sticky top-4 mb-4 mr-3 z-10 flex rounded-xl justify-between bg-[#181817] py-2 px-[10px] text-[13px] text-white dark:border-none dark:bg-[#444654] dark:text-neutral-200 h-12 shadow-lg">
                 <div className="flex items-center">
                   {/* user icon here */}
                 </div>

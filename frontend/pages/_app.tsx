@@ -18,7 +18,7 @@ function App({ Component, pageProps }: AppProps<{}>) {
       <Toaster />
       <ClerkProvider>
         <SignedIn>
-          <UserButton afterSignOutUrl="/"/>
+
           <QueryClientProvider client={queryClient}>
           <Component {...pageProps} />
         </QueryClientProvider>
