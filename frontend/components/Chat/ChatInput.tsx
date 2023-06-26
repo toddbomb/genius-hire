@@ -259,9 +259,9 @@ export const ChatInput = ({
 
   return (
     <div className="absolute bottom-4 left-0 w-full border-transparent bg-gradient-to-b from-transparent via-transparent to-transparent pt-6 dark:border-white/20 dark:via-[#343541] dark:to-[#343541] md:pt-2">
-      <div className={`w-full border-[#E0A0D4] mb-8 border-opacity-80 text-black px-[5px] py-[5px] rounded-lg font-semibold`}>
+{/*       <div className={`w-full border-[#E0A0D4] mb-8 border-opacity-80 text-black px-[5px] py-[5px] rounded-lg font-semibold`}>
         <ButtonCarousel/>
-      </div>
+      </div> */}
       <div className="stretch mx-2 mt-4 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-3xl">
         {/* Removed Regenerate Button
         {messageIsStreaming && (

@@ -2,8 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 //import './button.css';
 
 function ButtonCarousel() {
-  const [buttonData, setButtonData] = useState([]);
-  const buttonContainerRef = useRef(null);
+  const [buttonData, setButtonData] = useState<{ id: number; text: string; }[]>([]);
+  const buttonContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetchDataFromBackend().then(data => {
@@ -49,24 +49,24 @@ function ButtonCarousel() {
     ];
   };
 
-  const handleButtonClick = async (buttonText) => {
+  const handleButtonClick = async (buttonText : unknown) => {
       const data = { buttonText };
       const json = JSON.stringify(data);
 
-      try {
-        const response = await fetch('http://127.0.0.1:5000/chat/', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-            },
-            body: json,
-        });
+    //   try {
+    //     const response = await fetch('https://api.hriq.ai/chat/', {
+    //       method: 'POST',
+    //       headers: {
+    //           'Content-Type': 'application/json'
+    //         },
+    //         body: json,
+    //     });
 
-        // Process the response as needed
-      } catch (error) {
-        console.error('Error:', error);
-        // Handle the error
-      }
+    //     // Process the response as needed
+    //   } catch (error) {
+    //     console.error('Error:', error);
+    //     // Handle the error
+    //   }
     };
  // rounded-lg font-semibold
   return (

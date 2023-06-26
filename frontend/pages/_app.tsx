@@ -5,6 +5,8 @@ import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
 import { ClerkProvider, SignedIn, SignedOut, SignIn, UserButton } from '@clerk/nextjs';
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,17 +20,14 @@ function App({ Component, pageProps }: AppProps<{}>) {
     >
       <Toaster />
       <ClerkProvider
-        appearance={{
+        appearance={
+          {
           layout: {
             logoImageUrl: "logo2.png",
             logoPlacement: "inside",
-          },
-          elements: {
-            formButtonPrimary: {
-              backgroundColor: "#181818",
-            },
-          },
-        }}
+              }
+          }
+        }
       >
         <div className="flex flex-col justify-center items-center min-h-screen">
           <div className="flex items-center mb-4">

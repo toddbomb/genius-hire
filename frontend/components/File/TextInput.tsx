@@ -5,6 +5,7 @@ import React, {
     useState,
     memo,
     useRef,
+    ChangeEvent
   } from "react";
   import axios from "axios";
   import { ArrowUpTrayIcon } from "@heroicons/react/24/outline";
@@ -27,13 +28,16 @@ const handleButtonClick = () => {
     setError('');
 };
 
-const handleTitleChange = (event) => {
-    setTitle(event.target.value);
-};
 
-const handleTextChange = (event) => {
+const handleTitleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setTitle(event.target.value);
+  };
+
+  const handleTextChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     setText(event.target.value);
-};
+  };
+
+  
 
 const handleSubmit = () => {
     if (title.trim() === '') {
@@ -61,7 +65,7 @@ const handleFileUpload = async () => {
     const json = JSON.stringify(data);
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/text/', {
+      const response = await fetch('https://api.hriq.ai/text/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -93,6 +97,7 @@ return (
 
     {isOpen && (
         <div className={`w-[240px] border-[#F7F5E9] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg font-semibold bg-[#F7F5E9]`}>
+
             <div>
                 <label htmlFor="title-input" className="flex flex-col items-center justify-center text-black">
                 <span className="font-semibold items-center justify-center">Job Title</span>
@@ -102,6 +107,7 @@ return (
                     className="w-full mt-2 p-2 border border-gray-300 rounded"
                     value={title}
                     onChange={handleTitleChange}
+                    placeholder="Paste job title"
                 />
                 </label>
             </div>
@@ -114,6 +120,7 @@ return (
                     className="resize-none w-full h-300 mt-2 p-2 border border-gray-300 rounded"
                     value={text}
                     onChange={handleTextChange}
+                    placeholder="Paste job details"
                 ></textarea>
                 </label>
             </div>

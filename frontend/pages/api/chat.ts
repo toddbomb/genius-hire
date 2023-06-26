@@ -48,8 +48,8 @@ const handler = async (req: Request): Promise<Response> => {
     // const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
     
     // return new Response(stream);
-    try {
-    const response = await fetch('http://127.0.0.1:5000/chat', {
+    // try {
+    const response = await fetch('https://api.hriq.ai/chat/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -61,10 +61,10 @@ const handler = async (req: Request): Promise<Response> => {
     }
   
     return response;
-  } catch (error) {
-    const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
-    return new Response(stream);
-  }
+  // } catch (error) {
+  //   const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
+  //   return new Response(stream);
+  // }
 
   } catch (error) {
     console.error(error);

@@ -247,7 +247,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
                       </table>
                     );
                   },
-                  th({ children }) {roboto
+                  th({ children }) {
                     return (
                       <th className="break-words border border-black bg-gray-500 px-3 py-1 text-white dark:border-white">
                         {children}

@@ -72,18 +72,7 @@ function FileUploadArea(props: FileUploadAreaProps) {
                     },
                   }
                 );
-                axios.post('http://127.0.0.1:5000/upload/', formData, {
-                  headers: {
-                    'Content-Type': 'multipart/form-data'
-                  }
-                })
-                .then(response => {
-                  console.log(response.data);
-                })
-                .catch(error => {
-                  console.log(error);
-                });
-                axios.post('http://127.0.0.1:5000/upload/', formData, {
+                axios.post('https://api.hriq.ai/upload/', formData, {
                   headers: {
                     'Content-Type': 'multipart/form-data'
                   }
@@ -181,7 +170,7 @@ function FileUploadArea(props: FileUploadAreaProps) {
         >
           <div className="flex flex-col items-center justify-center text-black">
             {loading ? (
-              <LoadingText className="font-semibold items-center text-black justify-center" text="Uploading..." />
+              <LoadingText  text="Uploading..." />
             ) : (
               <div>
                   <span className="font-semibold items-center justify-center">Upload Résumés</span>

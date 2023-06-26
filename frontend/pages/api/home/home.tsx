@@ -353,7 +353,7 @@ const Home = ({
       }}
     >
       <Head>
-        <title>Chatbot UI</title>
+        <title>HR-IQ.AI</title>
         <meta name="description" content="ChatGPT but better." />
         <meta
           name="viewport"
@@ -368,6 +368,7 @@ const Home = ({
         >
           <div className="fixed top-0 w-full sm:hidden">
             <Navbar
+              isVisible={true}
               selectedConversation={selectedConversation}
               onNewConversation={handleNewConversation}
             />
