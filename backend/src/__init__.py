@@ -14,7 +14,7 @@ def create_app(test_config=None):
     else:
         app.config.from_mapping(test_config)
         app.debug = True
-    
+   
     app.register_blueprint(auth)
     app.register_blueprint(upload)
     app.register_blueprint(jobdesc)
