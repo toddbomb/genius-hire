@@ -2,7 +2,8 @@ from flask import Blueprint, request
 from src.route import pick_tool
 from src.database.chatHistory import memory
 from src.util.query_data import get_pdf_qa_chain_response
-
+from src.database.TemplateInfo import resumeName
+from src.database.TemplateInfo import JD
 auth = Blueprint('auth',__name__,url_prefix="/chat")
 
 @auth.post('/')
@@ -14,7 +15,7 @@ def chat():
     except:
         query = request_data['buttonText']
 
-    model_response = get_pdf_qa_chain_response(query=query)
+    model_response = get_pdf_qa_chain_response(query=query,job_description=JD, filename=resumeName)
     
     return model_response
     
