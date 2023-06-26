@@ -49,7 +49,7 @@ We're excited about the future of HRIQ and we have so many ideas about what we'd
 
 ## Contact 
 
-Tushar Aggarwal, Cristin Connerney, Hongyi Wu, Iris Cheng, and Alex Kim created this AI app as a submission for [pinecone](https://devpost.com/software/hriq)'s hackathon. If you have any questions or comments, please reach out to [Tushar Aggarwal](tusharagg12@gmail.com).
+Tushar Aggarwal, Cristin Connerney, Hongyi Wu, Iris Cheng, and Alex Kim created this AI app as a submission for [pinecone](https://devpost.com/software/hriq)'s hackathon. If you have any questions or comments, please reach out to Tushar Aggarwal at tusharagg12@gmail.com.
 
 ![Home Page](HRIQ.png)
 
