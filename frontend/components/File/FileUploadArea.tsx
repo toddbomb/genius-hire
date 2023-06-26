@@ -205,7 +205,7 @@ function FileUploadArea(props: FileUploadAreaProps) {
         )}
 
         </div>
-        <FileViewerList files={files} title="Uploaded Files" /> 
+        {/* <FileViewerList files={files} title="Uploaded Files" />  */}
       {/* <FileViewerList files={files} title="Uploaded Files" /> */}
     </div>
     
