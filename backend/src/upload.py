@@ -4,14 +4,20 @@ import pinecone
 from langchain.document_loaders import PyMuPDFLoader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Pinecone
+from src.database.FileName import file_name
 import fitz
 
 upload = Blueprint('upload',__name__,url_prefix="/upload")
 
 @upload.post('/')
 def upload_file():
+    global file_name
+    
     file_object = request.files.get('file')
     file_name = file_object.filename
+
+    with open('/backend/src/database/filename.txt', 'w') as f:
+        f.write(file_object.filename)
 
     print(request)
     print(file_object)
@@ -20,6 +26,8 @@ def upload_file():
     print('============')
     doc = fitz.open(stream=file_object.read(), filetype="pdf")
     print('============')
+
+    f.close()
 
     # Get the number of pages in the PDF file
     num_pages = len(doc)

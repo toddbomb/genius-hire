@@ -43,12 +43,12 @@ def get_pdf_qa_chain_response(query, job_description, filename):
 
     pdf_qa = RetrievalQA.from_chain_type(
         llm=chatgpt_model,
-        chain_type="map_reduce",
+        chain_type="stuff",
         retriever=vectorstore.as_retriever(),
         chain_type_kwargs=chain_type_kwargs
     )
 
-    result = pdf_qa.run(question=query)
+    result = pdf_qa.run(query)
 
     return result
 
