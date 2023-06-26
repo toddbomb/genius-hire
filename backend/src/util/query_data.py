@@ -25,7 +25,6 @@ def get_pdf_qa_chain_response(query, job_description, filename):
 
     vectorstore = Pinecone.from_existing_index(index_name, embeddings, namespace=filename)
 
-
     prompt_template = f"""You are an experienced hiring manager for a company. You will be given a job description and the resumes of candidates 
     to answer the user's question. Answer questions objectively, using the content from the job description to back up your answers.
       If the topic requested isn't in a candidate's resume, you can assume the candidate has no experience with the topic. 
@@ -59,4 +58,5 @@ def get_pdf_qa_chain_response(query, job_description, filename):
     result = pdf_qa.run(query)
 
     return result
+
 
