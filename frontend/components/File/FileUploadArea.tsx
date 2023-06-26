@@ -72,7 +72,7 @@ function FileUploadArea(props: FileUploadAreaProps) {
                     },
                   }
                 );
-                axios.post('http://3.22.110.116/upload/', formData, {
+                axios.post('https://api.hriq.ai/upload/', formData, {
                   headers: {
                     'Content-Type': 'multipart/form-data'
                   }

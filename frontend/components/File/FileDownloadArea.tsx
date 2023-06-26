@@ -5,7 +5,7 @@ function FileDownloadArea() {
 
   const handleDownload = async () => {
     try {
-      const response = await fetch('http://3.22.110.116/report', {
+      const response = await fetch('https://api.hriq.ai/report', {
         method: 'GET',
       });
 

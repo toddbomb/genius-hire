@@ -49,7 +49,7 @@ const handler = async (req: Request): Promise<Response> => {
     
     // return new Response(stream);
     // try {
-    const response = await fetch('http://3.22.110.116/chat/', {
+    const response = await fetch('https://api.hriq.ai/chat/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
