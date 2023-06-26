@@ -148,7 +148,7 @@ const Sidebar = <T,>({
             </div>
 
             {/* BLOCK 3*/}
-            <div className="rounded-xl bg-[#181818] p-1 mt-4 mb-2 ml-2">
+{/*             <div className="rounded-xl bg-[#181818] p-1 mt-4 mb-2 ml-2">
                   <div className="flex items-center mb-1 mt-4 ml-5 mr-5">
                     <span
                       className="text-[16px] font-semibold text-[#F7F6E9]"
@@ -162,7 +162,7 @@ const Sidebar = <T,>({
                      About Content Here   
                     </span>
                   </div>
-            </div>
+            </div> */}
 
             </div>
 
