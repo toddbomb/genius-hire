@@ -80,7 +80,7 @@ function ButtonCarousel() {
           {buttonData.map((button) => (
             <button
               key={button.id}
-              className="px-4 py-2 rounded-lg hover:bg-[#E0A0D4] hover:bg-opacity-80 hover:text-[#252425] mr-4 border font-semibold border-[#181818] border-1"
+              className="px-4 py-2 rounded-lg hover:bg-[#E0A0D4] hover:bg-opacity-80 hover:text-[#252425] mr-4 border font-semibold border-[#181818] border-1.5"
               onClick={() => handleButtonClick(button.text)}
             >
               {button.text}
