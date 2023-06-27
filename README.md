@@ -1,6 +1,8 @@
 # HR-IQ
 
-[Video](https://github.com/toddbomb/hr-iq/assets/41025592/4d23c52c-b89b-4beb-87e3-c8894795a762)
+
+https://github.com/toddbomb/hr-iq/assets/41025592/fa39714b-e7bf-49b0-a9d2-3e53ff612adb
+
 
 ## What is HR-IQ?
 
