@@ -1,6 +1,7 @@
 # HR-IQ
 
-![Home Page](home.png)
+https://github.com/toddbomb/hr-iq/assets/41025592/4d23c52c-b89b-4beb-87e3-c8894795a762
+
 
 ## What is HR-IQ?
 
