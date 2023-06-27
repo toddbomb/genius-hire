@@ -18,7 +18,7 @@ def get_pdf_qa_chain_response(query, job_description, filename):
     embeddings = OpenAIEmbeddings()
 
     pinecone.init(
-        api_key="035dee03-042d-4a6e-bc1b-a9a4a3546f2b",  # find at app.pinecone.io
+        api_key="my-key",  # find at app.pinecone.io
         environment="northamerica-northeast1-gcp",  # next to api key in console
     )
     index_name = "langchain1"
