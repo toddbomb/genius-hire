@@ -14,6 +14,9 @@ import React, {
   import LoadingText from "./LoadingText";
   import { FileLite } from "@/types/file";
   import FileViewerList from "./FileViewerList";
+  import { Document, Packer } from 'docx'
+  import { saveAs } from 'file-saver'
+
   
 function TextInputArea() {
 const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +55,9 @@ const handleSubmit = () => {
     
     // Process the submitted title and text (e.g., send them to a server, update state, etc.)
 
+    // is there a better looking way to do this?
+    alert("RFI downloaded")
+
     handleFileUpload();
 
     setIsOpen(false);
@@ -72,8 +78,8 @@ const handleFileUpload = async () => {
           },
           body: json,
       });
-      return response;
       // Process the response as needed
+      return response;
     } catch (error) {
       console.error('Error:', error);
       // Handle the error
