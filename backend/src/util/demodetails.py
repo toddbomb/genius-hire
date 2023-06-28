@@ -11,7 +11,7 @@ def details(query):
         | Video_Washable Reel Aesthetic Luxury_Evergreen_Product Shot_Shop Now_Washable_General Homeowner_Functionality_Washable_Single_Collection Page_IG | 67231 | 1.0% | $1.85 |
         | Video_Organic IG Top Performer 2_Evergreen_UGC_Dynamic_Best Sellers_General Homeowner_Variety_Multi_Single_Home Page_IG | 100106 | 0.8% | $2.26 |
         '''
-    elif 'attributes' in query:
+    elif 'attribute' in query:
         model_response = '''
         The attributes of the 'Video_Outdoor' ad with the highest confidence are Garden, Artwork, and Table. 
 

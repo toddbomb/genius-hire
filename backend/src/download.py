@@ -7,6 +7,6 @@ def download_report():
     # Logic to generate the report file
     # ...
 
-    report_path = ""
+    report_path = "Users/"
 
     return send_file(report_path, attachment_filename='report.pdf', as_attachment=True)
