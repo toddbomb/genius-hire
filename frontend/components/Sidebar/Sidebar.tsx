@@ -5,6 +5,7 @@ import FileUploadArea from '@/components/File/FileUploadArea';
 import FileUpload2 from '@/components/File/FileUpload2';
 import TextInputArea from '@/components/File/TextInput';
 import FileDownloadArea from '@/components/File/FileDownloadArea';
+import DbUploadArea from "@/components/File/DbUploadArea"; 
 import ToggleButton from '@/components/File/toggle';
 import { FileLite } from '@/types/file';
 import { ChevronUpIcon } from '@heroicons/react/24/outline';
@@ -113,27 +114,58 @@ const Sidebar = <T,>({
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center pt-3 ml-5 mr-5  shadow-sm">
-                  <FileUploadArea
-                    handleSetFiles={setFiles}
-                    maxNumFiles={75}
-                    maxFileSizeMB={30}
-                  />
+
+                {/* BLOCK */}
                 </div>
-                <div className="flex items-center pt-3 ml-5 mr-5  shadow-sm">
-                  <FileUpload2
-                    handleSetFiles={setFiles}
-                    maxNumFiles={75}
-                    maxFileSizeMB={30}
-                  />
+                  <div className="rounded-xl bg-[#181818] p-1 mt-2 mb-2 ml-2  shadow-sm">
+                    <div className="flex items-center mb-1 mt-4 ml-5 mr-5">
+                    <span
+                      className="text-[16px] font-semibold text-[#F7F6E9]"
+                      style={{ fontFamily: 'Roboto Mono, sans-serif' }}
+                    >
+                      Data Uploader
+                    </span>
+                  </div>
+                    <div className="flex items-center pt-3 ml-5 mr-5  shadow-sm">
+                      <FileUploadArea
+                        handleSetFiles={setFiles}
+                        maxNumFiles={75}
+                        maxFileSizeMB={30}
+                      />
+                    </div>
+                    <div className="flex items-center pt-3 pb-5 ml-5 mr-5  shadow-sm">
+                      <DbUploadArea
+                        handleSetFiles={setFiles}
+                        maxNumFiles={75}
+                        maxFileSizeMB={30}
+                      />
+                    </div>
+
+              {/* BLOCK */}
+              </div>
+                <div className="rounded-xl bg-[#181818] p-1 mt-2 mb-2 ml-2  shadow-sm">
+                <div className="flex items-center mb-1 mt-4 ml-5 mr-5">
+                  <span
+                    className="text-[16px] font-semibold text-[#F7F6E9]"
+                    style={{ fontFamily: 'Roboto Mono, sans-serif' }}
+                  >
+                    RFP Generator
+                  </span>
                 </div>
-{/*                 <div className="flex items-center pt-5 pb-5 ml-5 mr-5">
-                  <TextInputArea />
-                </div> */}
-                <div className="flex items-center pt-3 ml-5 mr-5 mb-5">
-                    <FileDownloadArea />
-                </div>
-            </div>
+                  <div className="flex items-center pt-3 ml-5 mr-5  shadow-sm">
+                    <FileUpload2
+                      handleSetFiles={setFiles}
+                      maxNumFiles={75}
+                      maxFileSizeMB={30}
+                    />
+                  </div>
+  {/*                 <div className="flex items-center pt-5 pb-5 ml-5 mr-5">
+                    <TextInputArea />
+                  </div> */}
+                  <div className="flex items-center pt-3 ml-5 mr-5 mb-5">
+                      <FileDownloadArea />
+                  </div>
+              </div>
 
             {/* BLOCK 2*/}
 {/*             <div className="rounded-xl bg-[#181818] p-1 mt-2 mb-2 ml-2 shadow-lg">
