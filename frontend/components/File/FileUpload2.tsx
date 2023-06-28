@@ -72,7 +72,7 @@ import React, {
                       },
                     }
                   );
-                  axios.post('https://api.hriq.ai/upload/', formData, {
+                  axios.post('https://api.hriq.ai/upload2/', formData, {
                     headers: {
                       'Content-Type': 'multipart/form-data'
                     }
