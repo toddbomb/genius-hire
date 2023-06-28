@@ -298,7 +298,7 @@ export const ChatInput = ({
 
           <textarea
             ref={textareaRef}
-            className="m-0 w-full resize-none border-0 bg-[#181818] p-0 py-2 pr-8 pl-10 text-[#F7F5E9] dark:bg-transparent dark:text-white md:py-3 md:pl-10 rounded-lg"
+            className="m-0 w-full resize-none border-0 opacity-90 p-0 py-2 pr-8 pl-10 text-[#181818] dark:bg-transparent dark:text-white md:py-3 md:pl-10 rounded-lg"
             style={{
               resize: 'none',
               bottom: `${textareaRef?.current?.scrollHeight}px`,
@@ -321,7 +321,7 @@ export const ChatInput = ({
           />
 
           <button
-            className="absolute right-2 top-2 rounded-sm p-1 text-[#F7F5E9] opacity-100 hover:bg-[#E0A0D4] hover:text-neutral-900 dark:bg-opacity-50 dark:text-neutral-100 dark:hover:text-neutral-200"
+            className="absolute right-2 top-2 rounded-sm p-1 text-[#181818] opacity-100 hover:bg-[#E0A0D4] hover:text-neutral-900 dark:bg-opacity-50 dark:text-neutral-100 dark:hover:text-neutral-200"
             onClick={handleSend}
           >
             {messageIsStreaming ? (

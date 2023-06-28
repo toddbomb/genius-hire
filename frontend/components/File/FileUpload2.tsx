@@ -157,7 +157,7 @@ import React, {
   
     return (
       <div>
-        <div className={`w-[240px] border-[#F7F5E9] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg hover:bg-white hover:bg-opacity-80 hover:text-[#252425]  font-semibold bg-[#F7F5E9]`}>
+        <div className={`w-[240px] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg hover:bg-white hover:bg-opacity-80 hover:text-[#252425]  font-semibold bg-[#E7E7E7]`}>
           <div className="flex flex-row items-center justify-center">
           <img src="upload.png" width="22px" height="22px" style={{ marginRight: '6px' }} alt="Upload Document" />
           <label
