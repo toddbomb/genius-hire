@@ -1,7 +1,5 @@
 from flask import Blueprint, request, jsonify
-from .util.Embed import call_embeddings
 import pinecone
-from langchain.document_loaders import PyMuPDFLoader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Pinecone
 from src.database.TemplateInfo import JD

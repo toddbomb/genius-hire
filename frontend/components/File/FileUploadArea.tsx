@@ -173,7 +173,7 @@ function FileUploadArea(props: FileUploadAreaProps) {
               <LoadingText  text="Uploading..." />
             ) : (
               <div>
-                  <span className="font-semibold items-center justify-center">Upload Résumés</span>
+                  <span className="font-semibold items-center justify-center">Upload Completed RFI/RFPs</span>
                 <input
                   id="dropzone-file"
                   type="file"
