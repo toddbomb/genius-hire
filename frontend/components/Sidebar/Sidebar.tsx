@@ -2,6 +2,7 @@ import { IconFolderPlus, IconMistOff, IconPlus } from '@tabler/icons-react';
 import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import FileUploadArea from '@/components/File/FileUploadArea';
+import FileUpload2 from '@/components/File/FileUpload2';
 import TextInputArea from '@/components/File/TextInput';
 import FileDownloadArea from '@/components/File/FileDownloadArea';
 import ToggleButton from '@/components/File/toggle';
@@ -119,16 +120,23 @@ const Sidebar = <T,>({
                     maxFileSizeMB={30}
                   />
                 </div>
+                <div className="flex items-center pt-3 ml-5 mr-5  shadow-sm">
+                  <FileUpload2
+                    handleSetFiles={setFiles}
+                    maxNumFiles={75}
+                    maxFileSizeMB={30}
+                  />
+                </div>
                 <div className="flex items-center pt-5 pb-5 ml-5 mr-5">
                   <TextInputArea />
                 </div>
-{/*                 <div className="flex items-center pt-5 ml-5 mr-5 mb-5">
+                <div className="flex items-center pt-5 ml-5 mr-5 mb-5">
                     <FileDownloadArea />
-                </div> */}
+                </div>
             </div>
 
             {/* BLOCK 2*/}
-            <div className="rounded-xl bg-[#181818] p-1 mt-2 mb-2 ml-2 shadow-lg">
+{/*             <div className="rounded-xl bg-[#181818] p-1 mt-2 mb-2 ml-2 shadow-lg">
                   <div className="flex items-center mb-1 mt-4 ml-5 mr-0">
                     <span
                       className="text-[16px] font-semibold text-[#F7F6E9]"
@@ -145,7 +153,7 @@ const Sidebar = <T,>({
                   <div className="flex items-center justify-center mb-5 pt-2.5 pr-2 ml-5 mr-5">
                     <ToggleButton />
                   </div>
-            </div>
+            </div> */}
 
             {/* BLOCK 3*/}
 {/*             <div className="rounded-xl bg-[#181818] p-1 mt-4 mb-2 ml-2">
