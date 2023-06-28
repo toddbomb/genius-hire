@@ -28,12 +28,12 @@ function FileDownloadArea() {
     <div>
         <div className="flex flex-row items-center justify-center">
         {downloadLink ? (
-            <a href={downloadLink} download="report.pdf" className={`flex flex-col items-center justify-center w-[240px] border-[#F7F5E9] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg hover:bg-white hover:bg-opacity-80 hover:text-[#252425] font-semibold bg-[#F7F5E9]`}>
-            Download Report
+            <a href={downloadLink} download="LorealMagnite.pdf" className={`flex flex-col items-center justify-center w-[240px] border-[#F7F5E9] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg hover:bg-white hover:bg-opacity-80 hover:text-[#252425] font-semibold bg-[#F7F5E9]`}>
+            Download Loreal x Magnite RFP
             </a>
         ) : null} 
-            <a href={downloadLink} download="report.pdf" className={`flex flex-col items-center justify-center w-[240px] border-[#F7F5E9] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg hover:bg-white hover:bg-opacity-80 hover:text-[#252425] font-semibold bg-[#F7F5E9]`}>
-            Download Report
+            <a href={downloadLink} download="LorealMagnite.pdf" className={`flex flex-col items-center justify-center w-[240px] border-[#F7F5E9] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg hover:bg-white hover:bg-opacity-80 hover:text-[#252425] font-semibold bg-[#F7F5E9]`}>
+            Download Loreal x Magnite RFP
             </a>
         </div>
     </div>

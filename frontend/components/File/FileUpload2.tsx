@@ -173,7 +173,7 @@ import React, {
                 <LoadingText  text="Uploading..." />
               ) : (
                 <div>
-                    <span className="font-semibold items-center justify-center">Upload Completed RFI/RFPs</span>
+                    <span className="font-semibold items-center justify-center">Upload New RFP Request</span>
                   <input
                     id="dropzone-file"
                     type="file"

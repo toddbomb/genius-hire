@@ -127,10 +127,10 @@ const Sidebar = <T,>({
                     maxFileSizeMB={30}
                   />
                 </div>
-                <div className="flex items-center pt-5 pb-5 ml-5 mr-5">
+{/*                 <div className="flex items-center pt-5 pb-5 ml-5 mr-5">
                   <TextInputArea />
-                </div>
-                <div className="flex items-center pt-5 ml-5 mr-5 mb-5">
+                </div> */}
+                <div className="flex items-center pt-3 ml-5 mr-5 mb-5">
                     <FileDownloadArea />
                 </div>
             </div>
