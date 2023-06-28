@@ -23,11 +23,13 @@ def chat():
         except KeyError:
             query = None
 
-    # print(JD)
-    # print("==============")
-    # model_response = get_pdf_qa_chain_response(query=query,job_description=JD[0], filename=JD[1])
-    model_response = rfi_response(query)
+    # Performance data
+    model_response = details(query)
 
+    # RFI
+    if model_response == '':
+        model_response = get_pdf_qa_chain_response(query=query,job_description=JD[0], filename=JD[1])
+    
     
     return model_response
     
