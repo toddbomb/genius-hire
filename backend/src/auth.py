@@ -1,6 +1,5 @@
 from flask import Blueprint, request
 from src.database.chatHistory import memory
-from src.util.query_data import get_pdf_qa_chain_response
 from src.util.rfi_builder import rfi_response
 from src.util.demodetails import details
 from src.database.TemplateInfo import JD
@@ -28,7 +27,7 @@ def chat():
 
     # RFI
     if model_response == '':
-        model_response = get_pdf_qa_chain_response(query=query,job_description=JD[0], filename=JD[1])
+        model_response = rfi_response(query)
     
     
     return model_response

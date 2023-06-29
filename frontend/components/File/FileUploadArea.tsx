@@ -110,10 +110,6 @@ function FileUploadArea(props: FileUploadAreaProps) {
                 return null;
               }
             } else {
-              alert(
-                `Invalid file type or size. Only TXT, PDF, DOCX or MD are allowed, up to ${props.maxFileSizeMB}MB.`
-              );
-              return null; // Skip this file
             }
           })
         );

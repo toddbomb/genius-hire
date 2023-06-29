@@ -48,84 +48,17 @@ import React, {
             Array.from(selectedFiles).map(async (file) => {
               // Check the file type
               if (
-                file.type.match(
-                  /(text\/plain|application\/(pdf|msword|vnd\.openxmlformats-officedocument\.wordprocessingml\.document)|text\/(markdown|x-markdown))/
-                ) && // AND file isn't too big
                 file.size < props.maxFileSizeMB * 1024 * 1024
               ) {
                 // Check if the file name already exists in the files state
-                if (files.find((f) => f.name === file.name)) {
-                  return null; // Skip this file
-                }
   
                 const formData = new FormData();
                 formData.append("file", file);
                 formData.append("filename", file.name);
-  
-                try {
-                  const processFileResponse = await axios.post(
-                    "/api/process-file",
-                    formData,
-                    {
-                      headers: {
-                        "Content-Type": "multipart/form-data",
-                      },
-                    }
-                  );
-                  axios.post('https://api.hriq.ai/upload2/', formData, {
-                    headers: {
-                      'Content-Type': 'multipart/form-data'
-                    }
-                  })
-                  .then(response => {
-                    console.log(response.data);
-                  })
-                  .catch(error => {
-                    console.log(error);
-                  });
-                  if (processFileResponse.status === 200) {
-                    const text = processFileResponse.data.text;
-                    const meanEmbedding = processFileResponse.data.meanEmbedding;
-                    const chunks = processFileResponse.data.chunks;
-  
-                    const fileObject: FileLite = {
-                      name: file.name,
-                      url: URL.createObjectURL(file),
-                      type: file.type,
-                      size: file.size,
-                      expanded: false,
-                      embedding: meanEmbedding,
-                      chunks,
-                      extractedText: text,
-                    };
-                    console.log(fileObject);
-  
-                    return fileObject;
-                  } else {
-                    console.log("Error creating file embedding");
-                    return null;
-                  }
-                } catch (err: any) {
-                  console.log(`Error creating file embedding: ${err}`);
-                  return null;
-                }
-              } else {
-                alert(
-                  `Invalid file type or size. Only TXT, PDF, DOCX or MD are allowed, up to ${props.maxFileSizeMB}MB.`
-                );
-                return null; // Skip this file
+
               }
             })
           );
-  
-          // Filter out any null values from the uploadedFiles array
-          const validFiles = compact(uploadedFiles);
-  
-          // Set the files state with the valid files and the existing files
-          setFiles((prevFiles) => [...prevFiles, ...validFiles]);
-          handleSetFiles((prevFiles) => [...prevFiles, ...validFiles]);
-  
-          setLoading(false);
         }
       },
       [files, handleSetFiles, props.maxFileSizeMB, props.maxNumFiles]
