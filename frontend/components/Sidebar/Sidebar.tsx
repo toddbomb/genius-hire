@@ -202,7 +202,7 @@ const Sidebar = <T,>({
                     </span>
                   </div>
             </div> */}
-            {footerComponent}
+            {/* {footerComponent} */}
             </div>
       </div>
   );
