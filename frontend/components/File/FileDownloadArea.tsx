@@ -29,11 +29,11 @@ function FileDownloadArea() {
         <div className="flex flex-row items-center justify-center">
         {downloadLink ? (
             <a href={"https://dl.dropboxusercontent.com/s/koz04v12l8ayx3p/LorealMagnite.pdf?dl=0"} download="L'oréalMagnite.pdf" className={`flex flex-col items-center justify-center w-[240px] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg hover:bg-white hover:bg-opacity-80 hover:text-[#252425] font-semibold bg-[#E7E7E7]`}>
-            Download L'oréal x Magnite RFP
+            Download report
             </a>
         ) : null} 
             <a href={"https://dl.dropboxusercontent.com/s/koz04v12l8ayx3p/LorealMagnite.pdf?dl=0"} download="L'oréalMagnite.pdf" className={`flex flex-col items-center justify-center w-[240px] border-opacity-80 text-black px-[5px] py-[5px] rounded-lg hover:bg-white hover:bg-opacity-80 hover:text-[#252425] font-semibold bg-[#E7E7E7]`}>
-            Download L'oréal x Magnite RFP
+            Download report
             </a>
         </div>
     </div>
