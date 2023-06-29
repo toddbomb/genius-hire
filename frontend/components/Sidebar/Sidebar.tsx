@@ -148,7 +148,7 @@ const Sidebar = <T,>({
                     className="text-[16px] font-semibold text-[#F7F6E9]"
                     style={{ fontFamily: 'Roboto Mono, sans-serif' }}
                   >
-                    RFI/FRP generator
+                    RFI/RFP generator
                   </span>
                 </div>
                   <div className="flex items-center pt-3 ml-5 mr-5 mb-1  shadow-sm">
