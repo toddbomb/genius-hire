@@ -354,7 +354,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
 
   return (
     <div className="relative flex-1 overflow-hidden" style={{
-      backgroundImage: 'url(/bkd.png)',
+      // backgroundImage: 'url(/bkd.png)',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
@@ -409,8 +409,8 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
             {selectedConversation?.messages.length === 0 ? (
               <>
                 <div className="h-10"></div>
-                <div className="flex justify-center items-center mt-10">
-                    <img src="/logo0.png" width="300"/>
+                <div className="flex justify-center items-center mt-3">
+                    <img src="/logo0.png" width="440"/>
                 </div>
                 <div className="text-center text-3xl IBM Plex Mono font-semibold text-[#6626F4] pt-4">
                   {models.length === 0 ? (
@@ -433,7 +433,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                 <div className="flex items-center justify-end">
                   
                   <button
-                    className="ml-2 cursor-pointer hover:opacity-80 flex items-center justify-center w-20px h-20px text-white px-[5px] py-[5px] rounded-lg hover:bg-white hover:text-[#252425] bg-[#F7F5E9]"
+                    className="ml-2 cursor-pointer hover:opacity-80 flex items-center justify-center w-20px h-20px text-white px-[5px] py-[5px] rounded-lg hover:bg-white hover:text-[#252425] bg-[#E7E7E7]"
                     onClick={onClearAll}
                   >
                     <img src="broom.png" width="22px" height="22px" alt="Clear All" />

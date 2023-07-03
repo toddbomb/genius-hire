@@ -45,11 +45,11 @@ const handler = async (req: Request): Promise<Response> => {
 
     encoding.free();
 
-    // const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
+    const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
     
-    // return new Response(stream);
+    return new Response(stream);
     // try {
-    const response = await fetch('http://127.0.0.1:5000/chat/', {
+/*     const response = await fetch('http://127.0.0.1:5000/chat/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error('Request failed with status ' + response.status);
     }
   
-    return response;
+    return response; */
   // } catch (error) {
   //   const stream = await OpenAIStream(model, promptToSend, temperatureToUse, key, messagesToSend);
   //   return new Response(stream);

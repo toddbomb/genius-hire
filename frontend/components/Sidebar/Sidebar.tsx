@@ -78,14 +78,14 @@ const Sidebar = <T,>({
       <div
         className={`sticky top-10 fixed z-40 flex h-full w-[314px] flex-none flex-col space-y-2 p-2 text-[14px] transition-all sm:relative sm:top-0`}
         style={{
-          backgroundImage: `url('bkd.png')`,
+          // backgroundImage: `url('bkd.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
             {/* BLOCK 0*/}
-            <div className="rounded-xl bg-[#181818] p-0 mt-2 mb-0 ml-2 shadow-sm">
-              <div className="flex items-center mb-2 mt-2 ml-4 mr-3">
+            <div className="rounded-xl  p-0 mt-2 mb-0 ml-2 shadow-sm">
+              <div className="flex items-center mb-4 mt-2 ml-4 mr-3">
                 <div><img src="/logo1.png" width="140" height="20" /></div>
                 <div className="ml-auto"><UserButton afterSignOutUrl="/" />
                 </div>
@@ -97,20 +97,19 @@ const Sidebar = <T,>({
             <div className="rounded-xl bg-[#181818] p-1 mt-2 mb-2 ml-2  shadow-sm">
                 <div className="flex items-center mb-1 mt-4 ml-5 mr-5">
                   <span
-                    className="text-[16px] font-semibold text-[#F7F6E9]"
+                    className="text-[16px] font-semibold text-[#E7E7E7]"
                     style={{ fontFamily: 'Roboto Mono, sans-serif' }}
                   >
-                    Welcome to HR-IQ!
+                    Magnite X Instalily.ai
                   </span>
                 </div>
                 <div className="rounded-xl bg-[#181818] p-2">
-                  <div className="flex items-center pt-1 mb-0 ml-3 mr-6  shadow-sm">
+                  <div className="flex items-center pt-1 mb-2 ml-3 mr-6  shadow-sm">
                     <span
-                      className="text-[12px] text-[#F7F6E9] text-sm"
+                      className="text-[12px] text-[#E7E7E7] text-sm"
                       style={{ fontFamily: 'Roboto Mono, sans-serif' }}
                     >
-                      Upload resumes and a job description, and let our intelligent chatbot analyze the data,
-                      generate reports, and provide customized interview questions.
+                      Magnite is the world’s largest independent sell-side advertising company. We’ll help you win across every channel, every format and on your terms.
                     </span>
                   </div>
                 </div>
@@ -118,15 +117,15 @@ const Sidebar = <T,>({
                 {/* BLOCK */}
                 </div>
                   <div className="rounded-xl bg-[#181818] p-1 mt-2 mb-2 ml-2  shadow-sm">
-                    <div className="flex items-center mb-1 mt-4 ml-5 mr-5">
+                    <div className="flex items-center mb-2.5 mt-4 ml-5 mr-5">
                     <span
-                      className="text-[16px] font-semibold text-[#F7F6E9]"
+                      className="text-[16px] font-semibold text-[#E7E7E7]"
                       style={{ fontFamily: 'Roboto Mono, sans-serif' }}
                     >
                       Data Uploader
                     </span>
                   </div>
-                    <div className="flex items-center pt-3 ml-5 mr-5  shadow-sm">
+                    <div className="flex items-center mb-1 pt-3 ml-5 mr-5  shadow-sm">
                       <FileUploadArea
                         handleSetFiles={setFiles}
                         maxNumFiles={75}
@@ -144,15 +143,15 @@ const Sidebar = <T,>({
               {/* BLOCK */}
               </div>
                 <div className="rounded-xl bg-[#181818] p-1 mt-2 mb-2 ml-2  shadow-sm">
-                <div className="flex items-center mb-1 mt-4 ml-5 mr-5">
+                <div className="flex items-center mb-2 mt-4 ml-5 mr-5">
                   <span
                     className="text-[16px] font-semibold text-[#F7F6E9]"
                     style={{ fontFamily: 'Roboto Mono, sans-serif' }}
                   >
-                    RFP Generator
+                    RFI/RFP generator
                   </span>
                 </div>
-                  <div className="flex items-center pt-3 ml-5 mr-5  shadow-sm">
+                  <div className="flex items-center pt-3 ml-5 mr-5 mb-1  shadow-sm">
                     <FileUpload2
                       handleSetFiles={setFiles}
                       maxNumFiles={75}
@@ -203,10 +202,8 @@ const Sidebar = <T,>({
                     </span>
                   </div>
             </div> */}
-
-            </div>
-
             {/* {footerComponent} */}
+            </div>
       </div>
   );
 };
